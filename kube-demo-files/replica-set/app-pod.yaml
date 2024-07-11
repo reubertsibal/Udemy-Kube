@@ -1,0 +1,17 @@
+# Api Version - From Official Doc
+apiVersion: v1
+# Kind - Type of K8s Component
+kind: Pod
+# Metadata - Data for your Components
+metadata:
+  name: app-container-pod
+  labels:
+    app: app-container-pod
+# spec - define the resources    
+spec: 
+  containers:
+    - name: app-container
+      image: imranvisualpath/freshtomapp:V7
+      ports: 
+       - containerPort: 8080
+         name: app-port 

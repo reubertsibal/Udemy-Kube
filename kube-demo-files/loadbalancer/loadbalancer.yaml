@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer
+spec:
+  selector:
+    app: app-container-pod
+  type: LoadBalancer
+  ports:
+  - name: loadbalancer-port
+    port: 80
+    targetPort: app-port
+    protocol: TCP
+
